@@ -1,4 +1,6 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# axet-graphify-managed
+.graphify/
+.graphifyignore
 
 # Compiled output
 /dist
@@ -6,10 +8,8 @@
 /out-tsc
 /bazel-out
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # IDEs and editors
 .idea/
@@ -19,15 +19,22 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/mcp.json
 .history/*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Miscellaneous
 /.angular/cache
@@ -38,7 +45,28 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+.husky
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
 
 # System files
 .DS_Store
 Thumbs.db
+
+# temp directory
+.temp
+.tmp
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.env.example
+
+# graphify-axet
+.graphify/
