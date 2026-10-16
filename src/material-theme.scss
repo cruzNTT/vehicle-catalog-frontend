@@ -4,6 +4,8 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@import '@angular/cdk/a11y-prebuilt.css';
+@import '@angular/cdk/overlay-prebuilt.css';
 
 html {
   height: 100%;
