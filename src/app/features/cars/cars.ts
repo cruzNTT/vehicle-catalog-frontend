@@ -1,8 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { Observable } from 'rxjs';
 
-import { CarsList } from '../../core/carsListService/cars-list';
 import { DynamicTable } from '../../shared/table/table';
 import { TableColumn, TableRow } from '../../shared/table/table.model';
 
