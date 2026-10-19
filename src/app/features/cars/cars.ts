@@ -1,4 +1,8 @@
 import { Component, signal } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { Observable } from 'rxjs';
+
+import { CarsList } from '../../core/carsListService/cars-list';
 import { DynamicTable } from '../../shared/table/table';
 import { TableColumn, TableRow } from '../../shared/table/table.model';
 
@@ -17,53 +21,13 @@ interface Car {
 }
 
 @Component({
-  imports: [DynamicTable],
+  imports: [DynamicTable, MatIconModule],
   selector: 'app-cars',
   styleUrl: './cars.css',
   templateUrl: './cars.html',
 })
 export class Cars {
-  cars: Car[] = [
-    {
-      id: '66f7056c-ab0e-4b39-b6c8-c0b326874e1d',
-      brand: {
-        id: 'brand-1',
-        name: 'Toyota',
-      },
-      model: {
-        id: 'model-1',
-        name: 'Corolla',
-      },
-      total: 1,
-      imageUrl: '/images/car_images/model-1_toyota_corolla.webp',
-    },
-    {
-      id: '66f7056c-ab0e-4b39-b6c8-c0b326874e1d',
-      brand: {
-        id: 'brand-1',
-        name: 'Toyota',
-      },
-      model: {
-        id: 'model-1',
-        name: 'Corolla',
-      },
-      total: 1,
-      imageUrl: '/images/car_images/model-1_toyota_corolla.webp',
-    },
-    {
-      id: '66f7056c-ab0e-4b39-b6c8-c0b326874e1d',
-      brand: {
-        id: 'brand-1',
-        name: 'Toyota',
-      },
-      model: {
-        id: 'model-1',
-        name: 'Corolla',
-      },
-      total: 1,
-      imageUrl: '/images/car_images/model-1_toyota_corolla.webp',
-    }
-  ];
+  cars: Car[] = [];
 
   rows: TableRow[] = this.cars.map((car) => ({
     id: car.id,

@@ -1,6 +1,4 @@
-<table
-  class="table table-bordered border-primary table-hover container px-4 text-center"
->
+<table class="table table-bordered border-primary table-hover text-center">
   <caption class="cdk-visually-hidden">
     {{
       tableTitle()
@@ -22,9 +20,9 @@
       </tr>
     }
   </tbody>
-  <div class="">
+  <tfoot>
     <nav>
-      <ul class="pagination">
+      <ul class="pagination bg-transparent">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -32,5 +30,5 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
     </nav>
-  </div>
+  </tfoot>
 </table>

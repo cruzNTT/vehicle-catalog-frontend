@@ -3,13 +3,9 @@ import { Cars } from '../../features/cars/cars';
 
 @Service()
 export class CarsList {
-  // cars: Cars[] = [
-  //   {}
-  // ];
+  cars: Cars[] = [];
 
-  // constructor() {}
-
-  // getCars(): Cars[] {
-  //   return this.cars;
-  // }
+  getCars(): Cars[] {
+    return this.cars;
+  }
 }

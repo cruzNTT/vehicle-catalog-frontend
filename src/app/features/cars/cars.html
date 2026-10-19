@@ -1,24 +1,54 @@
-<div class="container text-center">
+<div class="container">
   <div class="row">
     <div class="col searchStyle">
-      <nav class="navbar bg-1 fg-2">
+      <nav class="navbar bg-transparent fg-2">
         <div class="container-fluid">
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Buscar"
               aria-label="Search"
             />
-            <button class="btn-outline theme-success" type="submit">Search</button>
+            <button class="btn-outline theme-primary" type="submit">
+              <mat-icon aria-hidden="false" fontIcon="search"></mat-icon>
+            </button>
           </form>
         </div>
       </nav>
     </div>
-    <div class="col">Filtros</div>
+    <div class="col searchStyle">
+      <nav class="navbar bg-transparent fg-2">
+        <button
+          class="form-control combobox-toggle"
+          type="button"
+          data-bs-toggle="combobox"
+          data-bs-name="marca"
+          data-bs-placeholder="Selecciona una marca…"
+        >
+          <span class="combobox-value">Selecciona una marca…</span>
+          <svg
+            class="combobox-caret"
+            width="10"
+            height="16"
+            viewBox="0 0 10 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.46967 5.46967C0.762563 5.17678 1.23744 5.17678 1.53033 5.46967L5 8.93934L8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967C9.82322 5.76256 9.82322 6.23744 9.53033 6.53033L5.53033 10.5303C5.23744 10.8232 4.76256 10.8232 4.46967 10.5303L0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967Z"
+              fill="currentcolor"
+            />
+          </svg>
+        </button>
+        <div class="menu">
+          <button class="menu-item" type="button" data-bs-value="us">Toyota</button>
+        </div>
+      </nav>
+    </div>
   </div>
-</div>
 
-<div class="px-4 text-center">
-  <app-table [rows]="rows" [columns]="columns"></app-table>
+  <div>
+    <app-table [rows]="rows" [columns]="columns"></app-table>
+  </div>
 </div>
